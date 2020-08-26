@@ -1,0 +1,47 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: cryptoman-socketshark
+  namespace: cryptoman
+  labels:
+    app: cryptoman-socketshark
+spec:
+  type: NodePort
+  ports:
+  - name: cryptoman-socketshark
+    port: 9011
+    targetPort: 9011
+    protocol: TCP
+  selector:
+    app: cryptoman-socketshark
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cryptoman-socketshark
+  namespace: cryptoman
+  labels:
+    app: cryptoman-socketshark
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: cryptoman-socketshark
+  template:
+    metadata:
+      labels:
+        app: cryptoman-socketshark
+    spec:
+      imagePullSecrets:
+      - name: myregistrykey
+      containers:
+      - name: cryptoman-socketshark
+        image: eu.gcr.io/my-projectjwmt7xk/cryptoman-socketshark
+        # image: eu.gcr.io/my-projectjwmt7xk/tradingviewudfbinancenode
+        imagePullPolicy: Always
+        envFrom:
+        - configMapRef:
+            name: cryptoman-config
+        ports:
+        - name: http
+          containerPort: 9011

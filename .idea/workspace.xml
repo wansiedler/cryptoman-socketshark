@@ -1,0 +1,556 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="4b39bcbb-e994-43c2-8e63-0f77955bd35c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../docker/K8S/cryptoman/cryptoman-traefik.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../docker/K8S/cryptoman/my-shell.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../cryptoman_2.0/apps/accounts/api/serializers.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../cryptoman_2.0/apps/accounts/api/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../cryptoman_2.0/apps/accounts/api/view.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../cryptoman_2.0/apps/accounts/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../cryptoman_2.0/apps/accounts/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../cryptoman_2.0/apps/accounts/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../cryptoman_2.0/apps/cryptoman/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../cryptoman_2.0/apps/cryptoman/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../cryptoman_2.0/apps/cryptoman/static/js/ion.rangeSlider.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../cryptoman_2.0/apps/cryptoman/static/js/jquery.redirect.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../cryptoman_2.0/apps/cryptoman/static/js/smart_trading.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../cryptoman_2.0/apps/cryptoman/static/js/ws4redis.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../cryptoman_2.0/apps/tv_chart/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../cryptoman_2.0/apps/tv_chart/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../cryptoman_2.0/apps/tv_chart/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../cryptoman_2.0/apps/tv_chart/tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dockerignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/devspace.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/socketshark.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/socketshark2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.gitlab-ci.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.gitlab-ci.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.travis.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../docker/.gitmodules" beforeDir="false" afterPath="$PROJECT_DIR$/../../docker/.gitmodules" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../docker/django_project/.zinit/plugins/sindresorhus---pure" beforeDir="false" afterPath="$PROJECT_DIR$/../../docker/django_project/.zinit/plugins/sindresorhus---pure" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../docker/django_project/.zinit/plugins/tj---git-extras" beforeDir="false" afterPath="$PROJECT_DIR$/../../docker/django_project/.zinit/plugins/tj---git-extras" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../docker/django_project/.zinit/plugins/trapd00r---LS_COLORS" beforeDir="false" afterPath="$PROJECT_DIR$/../../docker/django_project/.zinit/plugins/trapd00r---LS_COLORS" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../docker/django_project/.zinit/plugins/zdharma---fast-syntax-highlighting" beforeDir="false" afterPath="$PROJECT_DIR$/../../docker/django_project/.zinit/plugins/zdharma---fast-syntax-highlighting" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../docker/django_project/.zinit/plugins/zdharma---history-search-multi-word" beforeDir="false" afterPath="$PROJECT_DIR$/../../docker/django_project/.zinit/plugins/zdharma---history-search-multi-word" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../docker/django_project/.zinit/plugins/zinit-zsh---z-a-as-monitor" beforeDir="false" afterPath="$PROJECT_DIR$/../../docker/django_project/.zinit/plugins/zinit-zsh---z-a-as-monitor" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../docker/django_project/.zinit/plugins/zinit-zsh---z-a-bin-gem-node" beforeDir="false" afterPath="$PROJECT_DIR$/../../docker/django_project/.zinit/plugins/zinit-zsh---z-a-bin-gem-node" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../docker/django_project/.zinit/plugins/zinit-zsh---z-a-patch-dl" beforeDir="false" afterPath="$PROJECT_DIR$/../../docker/django_project/.zinit/plugins/zinit-zsh---z-a-patch-dl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../docker/django_project/.zinit/plugins/zsh-users---zsh-autosuggestions" beforeDir="false" afterPath="$PROJECT_DIR$/../../docker/django_project/.zinit/plugins/zsh-users---zsh-autosuggestions" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../docker/django_project/.zinit/snippets/OMZ::plugins--git/git.plugin.zsh/git.plugin.zsh" beforeDir="false" afterPath="$PROJECT_DIR$/../../docker/django_project/.zinit/snippets/OMZ::plugins--git/git.plugin.zsh/git.plugin.zsh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../docker/django_project/.zinit/snippets/OMZ::plugins--git/git.plugin.zsh/git.plugin.zsh.zwc" beforeDir="false" afterPath="$PROJECT_DIR$/../../docker/django_project/.zinit/snippets/OMZ::plugins--git/git.plugin.zsh/git.plugin.zsh.zwc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../docker/django_project/.zinit/snippets/PZT::modules--helper/init.zsh/init.zsh" beforeDir="false" afterPath="$PROJECT_DIR$/../../docker/django_project/.zinit/snippets/PZT::modules--helper/init.zsh/init.zsh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../docker/django_project/.zinit/snippets/PZT::modules--helper/init.zsh/init.zsh.zwc" beforeDir="false" afterPath="$PROJECT_DIR$/../../docker/django_project/.zinit/snippets/PZT::modules--helper/init.zsh/init.zsh.zwc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../docker/django_project/antigenrc.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../../docker/django_project/antigenrc.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../docker/django_project/cache/fsh/antigen.zsh" beforeDir="false" afterPath="$PROJECT_DIR$/../../docker/django_project/cache/fsh/antigen.zsh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../docker/django_project/cache/fsh/antigen.zsh.zwc" beforeDir="false" afterPath="$PROJECT_DIR$/../../docker/django_project/cache/fsh/antigen.zsh.zwc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../docker/django_project/ohmyzsh.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../../docker/django_project/ohmyzsh.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../docker/django_project/zinit.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../../docker/django_project/zinit.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../docker/django_project/zsh_history.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../../docker/django_project/zsh_history.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../docker/django_project/zshrc.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../../docker/django_project/zshrc.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../docker/docker-compose.administration.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../../docker-compose.db.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../docker/docker-compose.deploy.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../docker/docker-compose.dev.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../docker/docker-compose.override.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../../docker/docker-compose.db.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../docker/docker-compose.phpmysql.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../docker/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../../docker/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../docker/ecs-cli.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../docker/log/django_project/apt/eipp.log.xz" beforeDir="false" afterPath="$PROJECT_DIR$/../../docker/log/django_project/apt/eipp.log.xz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../docker/nginx/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/../../docker/nginx/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../docker/nginx/cryptoman.wansiedler.com.conf" beforeDir="false" afterPath="$PROJECT_DIR$/../../docker/nginx/cryptoman.wansiedler.com.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../docker/nginx/cryptoman2.wansiedler.com.conf" beforeDir="false" afterPath="$PROJECT_DIR$/../../docker/nginx/cryptoman2.wansiedler.com.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../docker/nginx/nginx.conf" beforeDir="false" afterPath="$PROJECT_DIR$/../../docker/nginx/nginx.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../docker/nginx/trade.wansiedler.com.conf" beforeDir="false" afterPath="$PROJECT_DIR$/../../docker/nginx/trade.wansiedler.com.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../docker/postgres/dumps/2020_07_08_pg_dump.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../../docker/postgres/dumps/2020_07_08_pg_dump.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../docker/postgres/dumps/2020_07_28_pg_dump.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../../docker/postgres/dumps/2020_07_28_pg_dump.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../docker/postgres/init.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../../docker/postgres/init.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../docker/postgres_pgadmin/servers.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../docker/postgres_pgadmin/servers.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../docker/server.history.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../../docker/server.history.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_1.0" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_1.0" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/.dockerignore" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/.dockerignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/Dockerfile.debian" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/Dockerfile.debian" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/Pipfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/css/autocomplete.css" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/css/autocomplete.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/css/base.css" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/css/base.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/css/changelists.css" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/css/changelists.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/css/dashboard.css" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/css/dashboard.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/css/fonts.css" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/css/fonts.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/css/forms.css" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/css/forms.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/css/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/css/login.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/css/responsive.css" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/css/responsive.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/css/responsive_rtl.css" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/css/responsive_rtl.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/css/rtl.css" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/css/rtl.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/css/vendor/select2/LICENSE-SELECT2.md" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/css/vendor/select2/LICENSE-SELECT2.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/css/vendor/select2/select2.css" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/css/vendor/select2/select2.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/css/vendor/select2/select2.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/css/vendor/select2/select2.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/css/widgets.css" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/css/widgets.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/fonts/LICENSE.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/fonts/LICENSE.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/fonts/README.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/fonts/README.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/fonts/Roboto-Bold-webfont.woff" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/fonts/Roboto-Bold-webfont.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/fonts/Roboto-Light-webfont.woff" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/fonts/Roboto-Light-webfont.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/fonts/Roboto-Regular-webfont.woff" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/fonts/Roboto-Regular-webfont.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/img/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/img/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/img/README.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/img/README.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/img/calendar-icons.svg" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/img/calendar-icons.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/img/gis/move_vertex_off.svg" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/img/gis/move_vertex_off.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/img/gis/move_vertex_on.svg" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/img/gis/move_vertex_on.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/img/icon-addlink.svg" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/img/icon-addlink.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/img/icon-alert.svg" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/img/icon-alert.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/img/icon-calendar.svg" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/img/icon-calendar.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/img/icon-changelink.svg" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/img/icon-changelink.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/img/icon-clock.svg" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/img/icon-clock.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/img/icon-deletelink.svg" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/img/icon-deletelink.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/img/icon-no.svg" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/img/icon-no.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/img/icon-unknown-alt.svg" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/img/icon-unknown-alt.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/img/icon-unknown.svg" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/img/icon-unknown.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/img/icon-viewlink.svg" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/img/icon-viewlink.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/img/icon-yes.svg" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/img/icon-yes.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/img/inline-delete.svg" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/img/inline-delete.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/img/search.svg" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/img/search.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/img/selector-icons.svg" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/img/selector-icons.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/img/sorting-icons.svg" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/img/sorting-icons.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/img/tooltag-add.svg" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/img/tooltag-add.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/img/tooltag-arrowright.svg" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/img/tooltag-arrowright.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/SelectBox.js" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/SelectBox.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/SelectFilter2.js" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/SelectFilter2.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/actions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/actions.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/actions.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/admin/DateTimeShortcuts.js" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/admin/DateTimeShortcuts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/admin/RelatedObjectLookups.js" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/admin/RelatedObjectLookups.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/autocomplete.js" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/autocomplete.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/calendar.js" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/calendar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/cancel.js" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/cancel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/change_form.js" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/change_form.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/collapse.js" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/collapse.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/collapse.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/collapse.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/core.js" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/core.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/inlines.js" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/inlines.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/inlines.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/inlines.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/jquery.init.js" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/jquery.init.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/popup_response.js" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/popup_response.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/prepopulate.js" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/prepopulate.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/prepopulate.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/prepopulate.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/prepopulate_init.js" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/prepopulate_init.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/urlify.js" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/urlify.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/vendor/jquery/LICENSE.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/vendor/jquery/LICENSE.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/vendor/jquery/jquery.js" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/vendor/jquery/jquery.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/vendor/jquery/jquery.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/vendor/jquery/jquery.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/vendor/select2/LICENSE.md" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/vendor/select2/LICENSE.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/vendor/select2/i18n/af.js" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/vendor/select2/i18n/af.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/vendor/select2/i18n/ar.js" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/vendor/select2/i18n/ar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/vendor/select2/i18n/az.js" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/vendor/select2/i18n/az.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/vendor/select2/i18n/bg.js" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/vendor/select2/i18n/bg.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/vendor/select2/i18n/bn.js" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/vendor/select2/i18n/bn.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/vendor/select2/i18n/bs.js" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/vendor/select2/i18n/bs.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/vendor/select2/i18n/ca.js" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/vendor/select2/i18n/ca.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/vendor/select2/i18n/cs.js" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/vendor/select2/i18n/cs.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/vendor/select2/i18n/da.js" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/vendor/select2/i18n/da.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/vendor/select2/i18n/de.js" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/vendor/select2/i18n/de.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/vendor/select2/i18n/dsb.js" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/vendor/select2/i18n/dsb.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/vendor/select2/i18n/el.js" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/vendor/select2/i18n/el.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/vendor/select2/i18n/en.js" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/vendor/select2/i18n/en.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/vendor/select2/i18n/es.js" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/vendor/select2/i18n/es.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/vendor/select2/i18n/et.js" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/vendor/select2/i18n/et.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/vendor/select2/i18n/eu.js" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/vendor/select2/i18n/eu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/vendor/select2/i18n/fa.js" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/vendor/select2/i18n/fa.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/vendor/select2/i18n/fi.js" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/vendor/select2/i18n/fi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/vendor/select2/i18n/fr.js" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/vendor/select2/i18n/fr.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/vendor/select2/i18n/gl.js" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/vendor/select2/i18n/gl.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/vendor/select2/i18n/he.js" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/vendor/select2/i18n/he.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/vendor/select2/i18n/hi.js" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/vendor/select2/i18n/hi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/vendor/select2/i18n/hr.js" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/vendor/select2/i18n/hr.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/vendor/select2/i18n/hsb.js" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/vendor/select2/i18n/hsb.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/vendor/select2/i18n/hu.js" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/vendor/select2/i18n/hu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/vendor/select2/i18n/hy.js" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/vendor/select2/i18n/hy.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/vendor/select2/i18n/id.js" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/vendor/select2/i18n/id.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/vendor/select2/i18n/is.js" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/vendor/select2/i18n/is.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/vendor/select2/i18n/it.js" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/vendor/select2/i18n/it.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/vendor/select2/i18n/ja.js" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/vendor/select2/i18n/ja.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/vendor/select2/i18n/ka.js" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/vendor/select2/i18n/ka.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/vendor/select2/i18n/km.js" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/vendor/select2/i18n/km.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/vendor/select2/i18n/ko.js" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/vendor/select2/i18n/ko.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/vendor/select2/i18n/lt.js" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/vendor/select2/i18n/lt.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/vendor/select2/i18n/lv.js" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/vendor/select2/i18n/lv.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/vendor/select2/i18n/mk.js" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/vendor/select2/i18n/mk.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/vendor/select2/i18n/ms.js" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/vendor/select2/i18n/ms.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/vendor/select2/i18n/nb.js" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/vendor/select2/i18n/nb.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/vendor/select2/i18n/ne.js" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/vendor/select2/i18n/ne.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/vendor/select2/i18n/nl.js" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/vendor/select2/i18n/nl.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/vendor/select2/i18n/pl.js" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/vendor/select2/i18n/pl.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/vendor/select2/i18n/ps.js" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/vendor/select2/i18n/ps.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/vendor/select2/i18n/pt-BR.js" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/vendor/select2/i18n/pt-BR.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/vendor/select2/i18n/pt.js" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/vendor/select2/i18n/pt.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/vendor/select2/i18n/ro.js" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/vendor/select2/i18n/ro.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/vendor/select2/i18n/ru.js" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/vendor/select2/i18n/ru.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/vendor/select2/i18n/sk.js" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/vendor/select2/i18n/sk.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/vendor/select2/i18n/sl.js" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/vendor/select2/i18n/sl.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/vendor/select2/i18n/sq.js" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/vendor/select2/i18n/sq.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/vendor/select2/i18n/sr-Cyrl.js" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/vendor/select2/i18n/sr-Cyrl.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/vendor/select2/i18n/sr.js" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/vendor/select2/i18n/sr.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/vendor/select2/i18n/sv.js" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/vendor/select2/i18n/sv.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/vendor/select2/i18n/th.js" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/vendor/select2/i18n/th.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/vendor/select2/i18n/tk.js" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/vendor/select2/i18n/tk.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/vendor/select2/i18n/tr.js" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/vendor/select2/i18n/tr.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/vendor/select2/i18n/uk.js" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/vendor/select2/i18n/uk.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/vendor/select2/i18n/vi.js" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/vendor/select2/i18n/vi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/vendor/select2/i18n/zh-CN.js" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/vendor/select2/i18n/zh-CN.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/vendor/select2/i18n/zh-TW.js" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/vendor/select2/i18n/zh-TW.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/vendor/select2/select2.full.js" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/vendor/select2/select2.full.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/vendor/select2/select2.full.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/vendor/select2/select2.full.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/vendor/xregexp/LICENSE.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/vendor/xregexp/LICENSE.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/vendor/xregexp/xregexp.js" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/vendor/xregexp/xregexp.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/vendor/xregexp/xregexp.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/admin/js/vendor/xregexp/xregexp.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/debug_toolbar/css/print.css" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/debug_toolbar/css/print.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/debug_toolbar/css/toolbar.css" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/debug_toolbar/css/toolbar.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/debug_toolbar/img/ajax-loader.gif" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/debug_toolbar/img/ajax-loader.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/debug_toolbar/img/back.png" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/debug_toolbar/img/back.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/debug_toolbar/img/back_hover.png" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/debug_toolbar/img/back_hover.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/debug_toolbar/img/close.png" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/debug_toolbar/img/close.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/debug_toolbar/img/close_hover.png" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/debug_toolbar/img/close_hover.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/debug_toolbar/img/djdt_vertical.png" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/debug_toolbar/img/djdt_vertical.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/debug_toolbar/img/indicator.png" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/debug_toolbar/img/indicator.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/debug_toolbar/js/redirect.js" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/debug_toolbar/js/redirect.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/debug_toolbar/js/toolbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/debug_toolbar/js/toolbar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/debug_toolbar/js/toolbar.timer.js" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/debug_toolbar/js/toolbar.timer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/livesync.js" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/livesync.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/rest_framework/css/bootstrap-theme.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/rest_framework/css/bootstrap-theme.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/rest_framework/css/bootstrap-tweaks.css" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/rest_framework/css/bootstrap-tweaks.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/rest_framework/css/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/rest_framework/css/bootstrap.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/rest_framework/css/default.css" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/rest_framework/css/default.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/rest_framework/css/font-awesome-4.0.3.css" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/rest_framework/css/font-awesome-4.0.3.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/rest_framework/css/prettify.css" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/rest_framework/css/prettify.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/rest_framework/docs/css/base.css" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/rest_framework/docs/css/base.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/rest_framework/docs/css/highlight.css" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/rest_framework/docs/css/highlight.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/rest_framework/docs/css/jquery.json-view.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/rest_framework/docs/css/jquery.json-view.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/rest_framework/docs/img/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/rest_framework/docs/img/favicon.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/rest_framework/docs/img/grid.png" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/rest_framework/docs/img/grid.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/rest_framework/docs/js/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/rest_framework/docs/js/api.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/rest_framework/docs/js/highlight.pack.js" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/rest_framework/docs/js/highlight.pack.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/rest_framework/docs/js/jquery.json-view.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/rest_framework/docs/js/jquery.json-view.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/rest_framework/fonts/fontawesome-webfont.eot" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/rest_framework/fonts/fontawesome-webfont.eot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/rest_framework/fonts/fontawesome-webfont.svg" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/rest_framework/fonts/fontawesome-webfont.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/rest_framework/fonts/fontawesome-webfont.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/rest_framework/fonts/fontawesome-webfont.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/rest_framework/fonts/fontawesome-webfont.woff" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/rest_framework/fonts/fontawesome-webfont.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/rest_framework/fonts/glyphicons-halflings-regular.eot" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/rest_framework/fonts/glyphicons-halflings-regular.eot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/rest_framework/fonts/glyphicons-halflings-regular.svg" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/rest_framework/fonts/glyphicons-halflings-regular.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/rest_framework/fonts/glyphicons-halflings-regular.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/rest_framework/fonts/glyphicons-halflings-regular.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/rest_framework/fonts/glyphicons-halflings-regular.woff" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/rest_framework/fonts/glyphicons-halflings-regular.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/rest_framework/fonts/glyphicons-halflings-regular.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/rest_framework/fonts/glyphicons-halflings-regular.woff2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/rest_framework/img/glyphicons-halflings-white.png" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/rest_framework/img/glyphicons-halflings-white.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/rest_framework/img/glyphicons-halflings.png" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/rest_framework/img/glyphicons-halflings.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/rest_framework/img/grid.png" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/rest_framework/img/grid.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/rest_framework/js/ajax-form.js" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/rest_framework/js/ajax-form.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/rest_framework/js/bootstrap.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/rest_framework/js/bootstrap.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/rest_framework/js/coreapi-0.1.1.js" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/rest_framework/js/coreapi-0.1.1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/rest_framework/js/csrf.js" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/rest_framework/js/csrf.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/rest_framework/js/default.js" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/rest_framework/js/default.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/rest_framework/js/jquery-3.4.1.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/rest_framework/js/jquery-3.4.1.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/rest_framework/js/prettify-min.js" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/_public/static/rest_framework/js/prettify-min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/celerybeat-schedule" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/connectors/binance_thread.py" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/apps/connectors/binance_thread.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/connectors/binancer.py" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/apps/connectors/binancer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/connectors/binancer_client.py" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/apps/connectors/binancer_client.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/connectors/redis_processor.py" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/apps/connectors/redis_processor.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/connectors/socketshark.py" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/apps/connectors/socketshark.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/connectors/socketshark2.py" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/apps/connectors/socketshark2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/connectors/telegramer.py" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/apps/connectors/telegramer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/connectors/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/apps/connectors/tests.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/connectors/trade_mate.py" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/apps/connectors/trade_mate.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/core/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/core/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/core/tasks.py" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/core/tasks.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/core/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/core/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/cryptoman/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/cryptoman/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/apps/cryptoman/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/cryptoman/api/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/apps/cryptoman/api/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/cryptoman/api/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/apps/cryptoman/api/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/cryptoman/api/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/apps/cryptoman/api/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/cryptoman/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/apps/cryptoman/apps.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/cryptoman/management/commands/calc_volume.py" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/apps/cryptoman/management/commands/calc_volume.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/cryptoman/management/commands/check_binance.py" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/apps/cryptoman/management/commands/check_binance.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/cryptoman/management/commands/email_report.py" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/apps/cryptoman/management/commands/email_report.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/cryptoman/management/commands/fix_orders.py" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/apps/cryptoman/management/commands/fix_orders.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/cryptoman/management/commands/fix_symbols.py" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/apps/cryptoman/management/commands/fix_symbols.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/cryptoman/management/commands/init_bots.py" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/apps/cryptoman/management/commands/init_bots.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/cryptoman/management/commands/run_binance.py" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/apps/cryptoman/management/commands/run_binance.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/cryptoman/management/commands/run_socketshark.py" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/apps/cryptoman/management/commands/run_socketshark.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/cryptoman/management/commands/run_telegram.py" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/apps/cryptoman/management/commands/run_telegram.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/cryptoman/management/commands/send_tm.py" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/apps/cryptoman/management/commands/send_tm.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/cryptoman/management/commands/shrink_guard_log.py" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/apps/cryptoman/management/commands/shrink_guard_log.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/cryptoman/management/commands/transfer_binance.py" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/apps/cryptoman/management/commands/transfer_binance.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/cryptoman/management/commands/update_day_vol.py" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/apps/cryptoman/management/commands/update_day_vol.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/cryptoman/management/commands/wipe_quotes.py" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/apps/cryptoman/management/commands/wipe_quotes.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/cryptoman/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/apps/cryptoman/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/cryptoman/migrations/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/apps/accounts/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/cryptoman/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/apps/cryptoman/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/cryptoman/smart_trading.py" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/apps/cryptoman/smart_trading.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/cryptoman/tasks.py" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/apps/cryptoman/tasks.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/cryptoman/templates/cryptoman/admin/autorefresh.html" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/apps/cryptoman/templates/cryptoman/admin/autorefresh.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/cryptoman/templates/cryptoman/admin/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/apps/cryptoman/templates/cryptoman/admin/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/cryptoman/templates/cryptoman/admin/base_site.html" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/apps/cryptoman/templates/cryptoman/admin/base_site.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/cryptoman/templates/cryptoman/admin/constance/change_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/apps/cryptoman/templates/cryptoman/admin/constance/change_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/cryptoman/templates/cryptoman/admin/cryptoman/order/autotrade_levels.html" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/apps/cryptoman/templates/cryptoman/admin/cryptoman/order/autotrade_levels.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/cryptoman/templates/cryptoman/admin/cryptoman/order/buy_levels.html" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/apps/cryptoman/templates/cryptoman/admin/cryptoman/order/buy_levels.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/cryptoman/templates/cryptoman/admin/cryptoman/order/change_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/apps/cryptoman/templates/cryptoman/admin/cryptoman/order/change_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/cryptoman/templates/cryptoman/admin/cryptoman/order/profit_levels.html" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/apps/cryptoman/templates/cryptoman/admin/cryptoman/order/profit_levels.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/cryptoman/templates/cryptoman/admin/cryptoman/order/tradingview.html" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/apps/cryptoman/templates/cryptoman/admin/cryptoman/order/tradingview.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/cryptoman/templates/cryptoman/admin/cryptoman/signal/change_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/apps/cryptoman/templates/cryptoman/admin/cryptoman/signal/change_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/cryptoman/templates/cryptoman/admin/cryptoman/strategy/change_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/apps/cryptoman/templates/cryptoman/admin/cryptoman/strategy/change_form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/cryptoman/templates/cryptoman/admin/cryptoman/symbol/change_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/apps/cryptoman/templates/cryptoman/admin/cryptoman/symbol/change_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/cryptoman/templates/cryptoman/admin/cryptoman/symbol/tradingview.html" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/apps/cryptoman/templates/cryptoman/admin/cryptoman/symbol/tradingview.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/cryptoman/templates/cryptoman/admin/def/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/apps/cryptoman/templates/cryptoman/admin/def/404.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/cryptoman/templates/cryptoman/admin/def/500.html" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/apps/cryptoman/templates/cryptoman/admin/def/500.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/cryptoman/templates/cryptoman/admin/def/actions.html" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/apps/cryptoman/templates/cryptoman/admin/def/actions.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/cryptoman/templates/cryptoman/admin/def/app_index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/apps/cryptoman/templates/cryptoman/admin/def/app_index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/cryptoman/templates/cryptoman/admin/def/auth/user/add_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/apps/cryptoman/templates/cryptoman/admin/def/auth/user/add_form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/cryptoman/templates/cryptoman/admin/def/auth/user/change_password.html" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/apps/cryptoman/templates/cryptoman/admin/def/auth/user/change_password.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/cryptoman/templates/cryptoman/admin/def/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/apps/cryptoman/templates/cryptoman/admin/def/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/cryptoman/templates/cryptoman/admin/def/base_site.html" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/apps/cryptoman/templates/cryptoman/admin/def/base_site.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/cryptoman/templates/cryptoman/admin/def/change_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/apps/cryptoman/templates/cryptoman/admin/def/change_form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/cryptoman/templates/cryptoman/admin/def/change_form_object_tools.html" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/apps/cryptoman/templates/cryptoman/admin/def/change_form_object_tools.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/cryptoman/templates/cryptoman/admin/def/change_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/apps/cryptoman/templates/cryptoman/admin/def/change_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/cryptoman/templates/cryptoman/admin/def/change_list_object_tools.html" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/apps/cryptoman/templates/cryptoman/admin/def/change_list_object_tools.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/cryptoman/templates/cryptoman/admin/def/change_list_results.html" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/apps/cryptoman/templates/cryptoman/admin/def/change_list_results.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/cryptoman/templates/cryptoman/admin/def/date_hierarchy.html" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/apps/cryptoman/templates/cryptoman/admin/def/date_hierarchy.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/cryptoman/templates/cryptoman/admin/def/delete_confirmation.html" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/apps/cryptoman/templates/cryptoman/admin/def/delete_confirmation.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/cryptoman/templates/cryptoman/admin/def/delete_selected_confirmation.html" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/apps/cryptoman/templates/cryptoman/admin/def/delete_selected_confirmation.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/cryptoman/templates/cryptoman/admin/def/edit_inline/stacked.html" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/apps/cryptoman/templates/cryptoman/admin/def/edit_inline/stacked.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/cryptoman/templates/cryptoman/admin/def/edit_inline/tabular.html" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/apps/cryptoman/templates/cryptoman/admin/def/edit_inline/tabular.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/cryptoman/templates/cryptoman/admin/def/filter.html" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/apps/cryptoman/templates/cryptoman/admin/def/filter.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/cryptoman/templates/cryptoman/admin/def/includes/fieldset.html" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/apps/cryptoman/templates/cryptoman/admin/def/includes/fieldset.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/cryptoman/templates/cryptoman/admin/def/includes/object_delete_summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/apps/cryptoman/templates/cryptoman/admin/def/includes/object_delete_summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/cryptoman/templates/cryptoman/admin/def/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/apps/cryptoman/templates/cryptoman/admin/def/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/cryptoman/templates/cryptoman/admin/def/invalid_setup.html" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/apps/cryptoman/templates/cryptoman/admin/def/invalid_setup.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/cryptoman/templates/cryptoman/admin/def/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/apps/cryptoman/templates/cryptoman/admin/def/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/cryptoman/templates/cryptoman/admin/def/object_history.html" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/apps/cryptoman/templates/cryptoman/admin/def/object_history.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/cryptoman/templates/cryptoman/admin/def/pagination.html" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/apps/cryptoman/templates/cryptoman/admin/def/pagination.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/cryptoman/templates/cryptoman/admin/def/popup_response.html" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/apps/cryptoman/templates/cryptoman/admin/def/popup_response.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/cryptoman/templates/cryptoman/admin/def/prepopulated_fields_js.html" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/apps/cryptoman/templates/cryptoman/admin/def/prepopulated_fields_js.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/cryptoman/templates/cryptoman/admin/def/search_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/apps/cryptoman/templates/cryptoman/admin/def/search_form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/cryptoman/templates/cryptoman/admin/def/submit_line.html" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/apps/cryptoman/templates/cryptoman/admin/def/submit_line.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/cryptoman/templates/cryptoman/admin/def/widgets/clearable_file_input.html" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/apps/cryptoman/templates/cryptoman/admin/def/widgets/clearable_file_input.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/cryptoman/templates/cryptoman/admin/def/widgets/foreign_key_raw_id.html" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/apps/cryptoman/templates/cryptoman/admin/def/widgets/foreign_key_raw_id.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/cryptoman/templates/cryptoman/admin/def/widgets/many_to_many_raw_id.html" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/apps/cryptoman/templates/cryptoman/admin/def/widgets/many_to_many_raw_id.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/cryptoman/templates/cryptoman/admin/def/widgets/radio.html" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/apps/cryptoman/templates/cryptoman/admin/def/widgets/radio.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/cryptoman/templates/cryptoman/admin/def/widgets/related_widget_wrapper.html" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/apps/cryptoman/templates/cryptoman/admin/def/widgets/related_widget_wrapper.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/cryptoman/templates/cryptoman/admin/def/widgets/split_datetime.html" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/apps/cryptoman/templates/cryptoman/admin/def/widgets/split_datetime.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/cryptoman/templates/cryptoman/admin/def/widgets/url.html" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/apps/cryptoman/templates/cryptoman/admin/def/widgets/url.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/cryptoman/templates/cryptoman/admin/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/apps/cryptoman/templates/cryptoman/admin/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/cryptoman/templates/cryptoman/admin/login.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/cryptoman/templates/cryptoman/smart_trading.html" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/apps/cryptoman/templates/cryptoman/smart_trading.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/cryptoman/templates/cryptoman/stats.html" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/apps/cryptoman/templates/cryptoman/stats.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/cryptoman/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/apps/accounts/tests.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/cryptoman/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/apps/cryptoman/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/cryptoman/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/apps/cryptoman/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/project_dump.json" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/project_dump.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/templates/admin/autorefresh.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/templates/admin/base.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/templates/admin/base_site.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/templates/admin/constance/change_list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/templates/admin/cryptoman/order/autotrade_levels.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/templates/admin/cryptoman/order/buy_levels.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/templates/admin/cryptoman/order/change_list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/templates/admin/cryptoman/order/profit_levels.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/templates/admin/cryptoman/order/tradingview.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/templates/admin/cryptoman/signal/change_list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/templates/admin/cryptoman/strategy/change_form.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/templates/admin/cryptoman/symbol/change_list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/templates/admin/cryptoman/symbol/tradingview.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/templates/admin/def/404.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/templates/admin/def/500.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/templates/admin/def/actions.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/templates/admin/def/app_index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/templates/admin/def/auth/user/add_form.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/templates/admin/def/auth/user/change_password.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/templates/admin/def/base.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/templates/admin/def/base_site.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/templates/admin/def/change_form.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/templates/admin/def/change_form_object_tools.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/templates/admin/def/change_list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/templates/admin/def/change_list_object_tools.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/templates/admin/def/change_list_results.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/templates/admin/def/date_hierarchy.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/templates/admin/def/delete_confirmation.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/templates/admin/def/delete_selected_confirmation.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/templates/admin/def/edit_inline/stacked.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/templates/admin/def/edit_inline/tabular.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/templates/admin/def/filter.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/templates/admin/def/includes/fieldset.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/templates/admin/def/includes/object_delete_summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/templates/admin/def/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/templates/admin/def/invalid_setup.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/templates/admin/def/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/apps/cryptoman/templates/cryptoman/admin/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/templates/admin/def/object_history.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/templates/admin/def/pagination.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/templates/admin/def/popup_response.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/templates/admin/def/prepopulated_fields_js.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/templates/admin/def/search_form.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/templates/admin/def/submit_line.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/templates/admin/def/widgets/clearable_file_input.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/templates/admin/def/widgets/foreign_key_raw_id.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/templates/admin/def/widgets/many_to_many_raw_id.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/templates/admin/def/widgets/radio.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/templates/admin/def/widgets/related_widget_wrapper.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/templates/admin/def/widgets/split_datetime.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/templates/admin/def/widgets/url.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/templates/admin/home.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/templates/admin/login.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/tools/common.py" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/apps/tools/common.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/tools/csrf_ws.py" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/apps/tools/csrf_ws.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/tools/format.py" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/apps/tools/format.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/tools/logger.py" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/apps/tools/logger.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/tools/logger_config.py" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/apps/tools/logger_config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/tools/monkey.py" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/apps/tools/monkey.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/tv_chart/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/apps/accounts/migrations/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/tv_chart/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/apps/accounts/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/tv_chart/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/apps/tv_chart/apps.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/tv_chart/charts.py" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/apps/tv_chart/charts.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/tv_chart/common.py" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/apps/tv_chart/common.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/tv_chart/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/apps/tv_chart/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/tv_chart/migrations/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/apps/accounts/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/tv_chart/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/apps/tv_chart/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/tv_chart/studyTemplates.py" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/apps/tv_chart/studyTemplates.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/tv_chart/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/apps/cryptoman/tests.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/tv_chart/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/apps/tv_chart/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoman_2.0/tv_chart/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoman_2.0/apps/tv_chart/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lead_manager_react_django" beforeDir="false" afterPath="$PROJECT_DIR$/../lead_manager_react_django" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react_project/.dockerignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react_project/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react_project/.gitlab-ci.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react_project/.keep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react_project/.travis.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react_project/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react_project/Dockerfile.aws.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react_project/Dockerfile.dev" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react_project/dist/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react_project/dist/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react_project/docker-compose.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react_project/docker-compose2.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react_project/env.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react_project/k8s/frontend-deployment.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react_project/k8s/frontend-service.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react_project/k8s/react.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react_project/k8s/redis-master-deployment.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react_project/k8s/redis-master-service.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react_project/k8s/redis-slave-deployment.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react_project/k8s/redis-slave-service.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react_project/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react_project/public/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react_project/public/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react_project/public/manifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react_project/react_project1/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react_project/react_project1/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react_project/react_project1/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react_project/react_project1/public/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react_project/react_project1/public/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react_project/react_project1/public/logo192.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react_project/react_project1/public/logo512.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react_project/react_project1/public/manifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react_project/react_project1/public/robots.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react_project/react_project1/src/App.test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react_project/react_project1/src/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react_project/react_project1/src/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react_project/react_project1/src/serviceWorker.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react_project/react_project1/src/setupTests.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react_project/src/App.test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react_project/src/components/App/App.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react_project/src/components/App/App.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react_project/src/components/App/logo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react_project/src/components/Demo/API.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react_project/src/components/Demo/Asynchronous.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react_project/src/components/Demo/ControllableStates.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react_project/src/components/Demo/EnhancedTable.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react_project/src/components/GlobalLoader/GlobalLoader.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react_project/src/components/GlobalLoader/GlobalLoader.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react_project/src/components/Loader/Loader.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react_project/src/components/Loader/Loader.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react_project/src/components/Navigation/Navigation.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react_project/src/components/Order/Dashboard.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react_project/src/components/Order/Form.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react_project/src/components/Order/OrderForm.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react_project/src/components/Order/OrderList.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react_project/src/components/Order/StopLossForm.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react_project/src/components/Order/Symbol.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react_project/src/components/Order/Symbol2.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react_project/src/components/Order/TakeBuyForm.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react_project/src/components/Order/TakeBuyList.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react_project/src/components/Order/TakeProfitForm.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react_project/src/components/TradingInterface/Alert/Alert.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react_project/src/components/TradingInterface/TradingInterface.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react_project/src/components/TradingInterface/TradingInterface.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react_project/src/components/TradingInterface/store/actions/action-types.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react_project/src/components/TradingInterface/store/actions/app.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react_project/src/components/TradingInterface/store/actions/auth.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react_project/src/components/TradingInterface/store/actions/messages.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react_project/src/components/TradingInterface/store/actions/orders" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react_project/src/components/TradingInterface/store/actions/symbols.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react_project/src/components/TradingInterface/store/data.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react_project/src/components/TradingInterface/store/middleware.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react_project/src/components/TradingInterface/store/reducers/appReducer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react_project/src/components/TradingInterface/store/reducers/authenticationReducer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react_project/src/components/TradingInterface/store/reducers/errorsReducer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react_project/src/components/TradingInterface/store/reducers/messagesReducer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react_project/src/components/TradingInterface/store/reducers/ordersReducer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react_project/src/components/TradingInterface/store/reducers/rootReducer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react_project/src/components/TradingInterface/store/saga/helloSaga.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react_project/src/components/TradingInterface/store/store.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react_project/src/components/TradingView/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react_project/src/components/layout/Alerts.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react_project/src/components/layout/Header.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react_project/src/components/tips/Components.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react_project/src/components/tips/ES5ToES6.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react_project/src/components/tips/JSXtoPlainJS.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react_project/src/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react_project/src/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react_project/src/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react_project/webpack.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tradingview-udf-binance-node" beforeDir="false" afterPath="$PROJECT_DIR$/../tradingview-udf-binance-node" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="1gVketAE9y8I8GUTOcJ1tep4qT6" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4b39bcbb-e994-43c2-8e63-0f77955bd35c" name="Default Changelist" comment="" />
+      <created>1598207245209</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1598207245209</updated>
+      <workItem from="1598207246477" duration="1843000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="811" y="337" key="FileChooserDialogImpl" time
