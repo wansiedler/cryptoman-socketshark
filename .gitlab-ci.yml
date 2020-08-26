@@ -7,8 +7,7 @@ before_script:
 stages:
   - build
   - release
-  - deploy
-release:
+build:
   stage: build
   image: docker:latest
   before_script:
@@ -21,7 +20,7 @@ release:
     - docker push eu.gcr.io/$GCP_PROJECT_ID/$CI_PROJECT_NAME:$COMMIT_SHA #:latest
   only:
     - master
-deploy:
+release:
   image: google/cloud-sdk:alpine
   stage: release
   variables:
