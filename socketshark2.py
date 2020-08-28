@@ -127,9 +127,9 @@ async def reader_common(common, name):
     while True:
         message = await common.get_json()
         await logger.debug(message)
-        logger.debug(len(sockets))
-        for row in sockets:
-            await row.ws.send_json(message)
+        # logger.debug(len(sockets))
+        for socket in sockets:
+            await socket.ws.send_json(message)
             await asyncio.sleep(0.1)
 
 
@@ -137,7 +137,7 @@ async def reader_private(private, name):
     logger.debug('   reader private initialized')
     while True:
         message = await private.get_json()
-        logger.debug(message)
+        # logger.debug(message)
         # if message['user_id'] in sockets:
         for socket in sockets:
             if message['user_id'] == socket.user_id and name in socket.subscriptions:
@@ -163,8 +163,8 @@ async def on_message(request: Request):
     sockets.append(row)
 
     async for msg in ws:  # type: WSMessage
-        logger.debug(msg.type)
-        logger.debug(msg.data)
+        # logger.debug(msg.type)
+        # logger.debug(msg.data)
         if msg.type == WSMsgType.TEXT:
             data = json.loads(msg.data)
             row.subscriptions.add(data['subscribe'])
