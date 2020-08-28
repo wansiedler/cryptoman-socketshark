@@ -14,10 +14,11 @@ before_install:
   - gcloud auth activate-service-account --key-file ${HOME}/gcloud-service-key.json  || die "unable to authenticate service account for gcloud"
   - gcloud container clusters get-credentials my-cluster --zone europe-west6-a --project $GCP_PROJECT_ID
   - docker login -u _json_key --password-stdin https://eu.gcr.io < ${HOME}/gcloud-service-key.json
+
+script:
   - docker build -t eu.gcr.io/$GCP_PROJECT_ID/cryptoman-socketshark:$COMMIT_SHA -t eu.gcr.io/$GCP_PROJECT_ID/cryptoman-socketshark:latest --file Dockerfile .
   - docker push eu.gcr.io/$GCP_PROJECT_ID/cryptoman-socketshark:$COMMIT_SHA
   - docker push eu.gcr.io/$GCP_PROJECT_ID/cryptoman-socketshark:latest
-#  - kubectl apply -f cryptoman-socketshark-service-k8s.yaml
   - kubectl apply -f cryptoman-socketshark-k8s.yaml
   - kubectl set image deployment/cryptoman-socketshark --namespace cryptoman cryptoman-socketshark=eu.gcr.io/$GCP_PROJECT_ID/cryptoman-socketshark:$COMMIT_SHA
 
