@@ -16,7 +16,7 @@ before_install:
   - docker build -t eu.gcr.io/$GCP_PROJECT_ID/cryptoman-socketshark:$COMMIT_SHA -t eu.gcr.io/$GCP_PROJECT_ID/cryptoman-socketshark:latest --file Dockerfile .
   - docker push eu.gcr.io/$GCP_PROJECT_ID/cryptoman-socketshark:$COMMIT_SHA
   - docker push eu.gcr.io/$GCP_PROJECT_ID/cryptoman-socketshark:latest
-  - kubectl apply -f cryptoman-socketshark-service-k8s.yaml
+#  - kubectl apply -f cryptoman-socketshark-service-k8s.yaml
   - kubectl apply -f cryptoman-socketshark-k8s.yaml
   - kubectl set image deployment/cryptoman-socketshark --namespace cryptoman cryptoman-socketshark=eu.gcr.io/$GCP_PROJECT_ID/cryptoman-socketshark:$COMMIT_SHA
 
