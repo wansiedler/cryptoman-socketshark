@@ -1,0 +1,77 @@
+sudo: required
+services:
+  - docker
+env:
+  global:
+    - COMMIT_SHA=$(git rev-parse HEAD)
+    - CLOUDSDK_CORE_DISABLE_PROMPTS=1
+before_install:
+  - echo $GCLOUD_SERVICE_KEY | base64 -d > ${HOME}/gcloud-service-key.json
+  - curl https://sdk.cloud.google.com | bash > /dev/null;
+  - source $HOME/google-cloud-sdk/path.bash.inc
+  - gcloud --quiet components update kubectl
+  - gcloud auth activate-service-account --key-file ${HOME}/gcloud-service-key.json  || die "unable to authenticate service account for gcloud"
+  - gcloud container clusters get-credentials my-cluster --zone europe-west6-a --project $GCP_PROJECT_ID
+  - docker login -u _json_key --password-stdin https://eu.gcr.io < ${HOME}/gcloud-service-key.json
+  - docker build -t eu.gcr.io/$GCP_PROJECT_ID/cryptoman-socketshark:$COMMIT_SHA -t eu.gcr.io/$GCP_PROJECT_ID/cryptoman-socketshark:latest --file Dockerfile .
+  - docker push eu.gcr.io/$GCP_PROJECT_ID/cryptoman-socketshark:$COMMIT_SHA
+  - docker push eu.gcr.io/$GCP_PROJECT_ID/cryptoman-socketshark:latest
+  - kubectl apply -f cryptoman-socketshark-service-k8s.yaml
+  - kubectl apply -f cryptoman-socketshark-k8s.yaml
+  - kubectl set image deployment/cryptoman-socketshark --namespace cryptoman cryptoman-socketshark=eu.gcr.io/$GCP_PROJECT_ID/cryptoman-socketshark:$COMMIT_SHA
+
+script:
+  - docker run eu.gcr.io/$GCP_PROJECT_ID/cryptoman-socketshark npm test -- --coverage
+
+#deploy:
+#  provider: script
+#  script: bash ./deploy.sh
+#  on:
+#    branch: master
+
+#  - openssl aes-256-cbc -K $encrypted_0c35eebf403c_key -iv $encrypted_0c35eebf403c_iv -in service-account.json.enc -out service-account.json -d
+#  - curl https://sdk.cloud.google.com | bash > /dev/null;
+#  - source $HOME/google-cloud-sdk/path.bash.inc
+#  - gcloud components update kubectl
+#  - gcloud auth activate-service-account --key-file service-account.json
+#  - gcloud config set project skilful-berm-214822
+#  - gcloud config set compute/zone us-central1-a
+#  - gcloud container clusters get-credentials multi-cluster
+#  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+#  - docker build -t stephengrider/react-test -f ./client/Dockerfile.dev ./client
+
+
+
+#services:
+#  - docker:dind
+#variables:
+#  DOCKER_DRIVER: overlay2
+#before_script:
+#  - apk update && apk upgrade && apk add --no-cache bash openssh
+#stages:
+#  - build
+#  - release
+#build:
+#  stage: build
+#  image: docker:latest
+#  before_script:
+#    - export COMMIT_SHA=$(echo $CI_COMMIT_SHA | cut -c1-8)
+#  script:
+#    - echo $GCLOUD_SERVICE_KEY | base64 -d > ${HOME}/gcloud-service-key.json
+#    - docker login -u _json_key --password-stdin https://eu.gcr.io < ${HOME}/gcloud-service-key.json
+#    - echo "eu.gcr.io/$GCP_PROJECT_ID/$CI_PROJECT_NAME:$COMMIT_SHA"
+#    - docker build -t eu.gcr.io/$GCP_PROJECT_ID/$CI_PROJECT_NAME:$COMMIT_SHA .
+#    - docker push eu.gcr.io/$GCP_PROJECT_ID/$CI_PROJECT_NAME:$COMMIT_SHA
+#  only:
+#    - master
+#release:
+#  image: google/cloud-sdk:alpine
+#  stage: release
+#  variables:
+#    KUBE_LATEST_VERSION: "v1.8.5"
+#  before_script:
+#    - export COMMIT_SHA=$(echo $CI_COMMIT_SHA | cut -c1-8)
+#  script:
+
+#  only:
+#    - master
