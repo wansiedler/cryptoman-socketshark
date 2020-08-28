@@ -20,8 +20,8 @@ before_install:
   - kubectl apply -f cryptoman-socketshark-k8s.yaml
   - kubectl set image deployment/cryptoman-socketshark --namespace cryptoman cryptoman-socketshark=eu.gcr.io/$GCP_PROJECT_ID/cryptoman-socketshark:$COMMIT_SHA
 
-script:
-  - docker run eu.gcr.io/$GCP_PROJECT_ID/cryptoman-socketshark npm test -- --coverage
+#script:
+#  - docker run eu.gcr.io/$GCP_PROJECT_ID/cryptoman-socketshark npm test -- --coverage
 
 #deploy:
 #  provider: script
