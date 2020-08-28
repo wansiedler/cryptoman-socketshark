@@ -15,5 +15,5 @@ EXPOSE 9011
 
 # Container start command
 # It is also possible to override this in devspace.yaml via images.*.cmd
-CMD ["python", "socketshark.py"]
-#CMD ["python", "socketshark2.py"]
+#CMD ["python", "socketshark.py"]
+CMD ["python", "socketshark2.py"]
