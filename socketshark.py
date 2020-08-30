@@ -1,5 +1,6 @@
 import json
 import logging
+
 from logging import config
 import os
 import typing
@@ -13,74 +14,61 @@ import redis
 import aioredis
 from redis import Redis
 
-LOGLEVEL = os.environ.get('LOGLEVEL', 'debug').upper()
-
-date_format_verbose = "%m-%d %H:%M:%S"
-date_format_simple = "%H:%M"
-
-format_simple = '%(log_color)s%(levelname).3s|%(asctime)s|%(filename)s@%(lineno)s> %(message)s'
-
-formatter_colored = {
-    '()': 'colorlog.ColoredFormatter',
-    'format': format_simple,
-    'reset': False,
-    'datefmt': date_format_simple,
-    'log_colors': {
-        'DEBUG': 'cyan',
-        'INFO': 'green',
-        'WARNING': 'yellow',
-        'ERROR': 'red',
-        'CRITICAL': 'red',
-    },
-}
-
-formatter_simple = {
-    'format': format_simple,
-    'datefmt': '%H:%M'
-}
-
 # # DataFlair #Logging Information
 DEFAULT_LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,
     'formatters': {
-        'simple': formatter_simple,
-        'colored': formatter_colored
+        'colored': {
+            '()': 'colorlog.ColoredFormatter',
+            'format': '%(log_color)s%(levelname).3s|%(asctime)s|%(filename)s@%(lineno)s> %(message)s',
+            'reset': False,
+            'datefmt': "%H:%M",
+            'log_colors': {
+                'DEBUG': 'cyan',
+                'INFO': 'green',
+                'WARNING': 'yellow',
+                'ERROR': 'red',
+                'CRITICAL': 'red',
+            },
+        },
     },
     'handlers': {
         'console': {
-            'level': LOGLEVEL,
+            'level': "DEBUG",
             'class': 'logging.StreamHandler',
             'formatter': 'colored',
         },
     },
     'loggers': {
         'connectors.socketshark': {
-            'level': LOGLEVEL,
+            'level': "DEBUG",
             'handlers': ['console'],
-            'propagate': True,
+            'propagate': False,
         },
     },
 }
 
-logging.config.dictConfig(DEFAULT_LOGGING)
+# logging.config.dictConfig(DEFAULT_LOGGING)
 
 logger = logging.getLogger('connectors.socketshark')
 
+HOST = '0.0.0.0'
+PORT = int(os.getenv('SOCKETSHARK_PORT', 9011))
 redis_host = os.getenv('REDIS_HOST', 'localhost')
 redis_password = os.getenv('REDIS_PASSWORD', '')
 
-logger.debug(redis_host)
 if redis_password:
     r: Redis = redis.client.StrictRedis(host=redis_host, password=redis_password)
 else:
     r: Redis = redis.client.StrictRedis(host=redis_host)
+
 routes = web.RouteTableDef()
 
-sockets: typing.List['SocketRow'] = []
+sockets: typing.List['Socket'] = []
 
 
-class SocketRow(typing.NamedTuple):
+class Socket(typing.NamedTuple):
     user_id: int
     ws: web.WebSocketResponse
     subscriptions: typing.Set
@@ -89,33 +77,63 @@ class SocketRow(typing.NamedTuple):
 expire_queue = asyncio.Queue()
 
 
+# @routes.get(r'/{token:\w+}')
+# async def onMessage(request: Request):
+#     ws = web.WebSocketResponse()
+#     await ws.prepare(request)
+#
+#     token = request.match_info['token']
+#     user_id = int(r.hget('private.tokens', token))
+#     if user_id:
+#         await expire_queue.put((token, user_id, datetime.now()+timedelta(minutes=5)))
+#         row = SocketRow(user_id, ws, set())
+#         sockets.append(row)
+#     else:
+#         return ws
+#
+#     async for msg in ws:  # type: WSMessage
+#         if msg.type == WSMsgType.TEXT:
+#             data = json.loads(msg.data)
+#             row.subscriptions.add(data['subscribe'])
+#         elif msg.type == WSMsgType.ERROR:
+#             print('ws connection closed with exception %s' %
+#                   ws.exception())
+#
+#     sockets.remove(row)
+#
+#     print('websocket connection closed')
+#
+#     return ws
+
 @routes.get(r'/{token:\w+}')
-async def onMessage(request: Request):
-    ws = web.WebSocketResponse()
-    await ws.prepare(request)
+async def on_message(request: Request):
+    websocket = web.WebSocketResponse()
+    await websocket.prepare(request)
 
     token = request.match_info['token']
     user_id = int(r.hget('private.tokens', token))
-    if user_id:
-        await expire_queue.put((token, user_id, datetime.now() + timedelta(minutes=5)))
-        row = SocketRow(user_id, ws, set())
-        sockets.append(row)
-    else:
-        return ws
+    if not token or not user_id:
+        return web.Response(text='Hello, friend. Youd better go away')
+    # await expire_queue.put((token, user_id, datetime.now() + timedelta(minutes=5)))
+    socket = Socket(user_id, websocket, set())
 
-    async for msg in ws:  # type: WSMessage
-        if msg.type == WSMsgType.TEXT:
-            data = json.loads(msg.data)
-            row.subscriptions.add(data['subscribe'])
-        elif msg.type == WSMsgType.ERROR:
+    sockets.append(socket)
+
+    async for websocket_message in websocket:  # type: WSMessage
+        if websocket_message.type == WSMsgType.TEXT:
+            logger.debug("adding a subscription")
+            data = json.loads(websocket_message.data)
+            socket.subscriptions.add(data['subscribe'])
+            logger.debug(socket.subscriptions)
+        elif websocket_message.type == WSMsgType.ERROR:
             logger.debug('ws connection closed with exception %s' %
-                         ws.exception())
+                         websocket.exception())
 
-    sockets.remove(row)
+    # sockets.remove(socket)
 
     logger.debug('websocket connection closed')
 
-    return ws
+    return websocket
 
 
 async def expire_task():
@@ -156,12 +174,15 @@ async def reader_private(private, name):
 
 
 async def redis_worker(app):
-    local_r = await aioredis.create_redis('redis://'+redis_host)
-    chan = await local_r.subscribe("common.messages")
+    if redis_password:
+        r = await aioredis.create_redis(f'redis://{redis_host}', password=redis_password)
+    else:
+        r = await aioredis.create_redis(f'redis://{redis_host}')
+    chan = await r.subscribe("common.messages")
     common = chan[0]
-    chan = await local_r.subscribe("private.messages")
+    chan = await r.subscribe("private.messages")
     private = chan[0]
-    chan = await local_r.subscribe("common.quotes")
+    chan = await r.subscribe("common.quotes")
     quotes = chan[0]
 
     asyncio.create_task(reader_common(common, 'common.messages'))
