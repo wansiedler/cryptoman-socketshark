@@ -3,6 +3,7 @@
 import asyncio
 import json
 import logging
+import time
 from logging import config
 import os
 import sys
@@ -19,30 +20,14 @@ from redis import Redis
 DEFAULT_LOGGING = {
     'version': 1,
     'disable_existing_loggers': True,
-    'formatters': {
-        'colored': {
-            '()': 'colorlog.ColoredFormatter',
-            'format': '%(log_color)s%(levelname).3s|%(asctime)s|%(filename)s@%(lineno)s> %(message)s',
-            'reset': False,
-            'datefmt': "%H:%M",
-            'log_colors': {
-                'DEBUG': 'cyan',
-                'INFO': 'green',
-                'WARNING': 'yellow',
-                'ERROR': 'red',
-                'CRITICAL': 'red',
-            },
-        },
-    },
     'handlers': {
         'console': {
             'level': "DEBUG",
             'class': 'logging.StreamHandler',
-            # 'formatter': 'colored',
         },
     },
     'loggers': {
-        'connectors.socketshark': {
+        '': {
             'level': "DEBUG",
             'handlers': ['console'],
             'propagate': False,
@@ -52,17 +37,12 @@ DEFAULT_LOGGING = {
 
 logging.config.dictConfig(DEFAULT_LOGGING)
 
-logger = logging.getLogger('connectors.socketshark')
+logger = logging.getLogger('')
 
 HOST = '0.0.0.0'
 PORT = int(os.getenv('SOCKETSHARK_PORT', 9011))
 redis_host = os.getenv('REDIS_HOST', 'localhost')
 redis_password = os.getenv('REDIS_PASSWORD', '')
-
-if redis_password:
-    redis_access: Redis = redis.client.StrictRedis(host=redis_host, password=redis_password)
-else:
-    redis_access: Redis = redis.client.StrictRedis(host=redis_host)
 
 routes = web.RouteTableDef()
 sockets: typing.List['Socket'] = []
@@ -91,50 +71,73 @@ async def redis_worker(app):
     chan = await redis_worker_access.subscribe("common.quotes")
     quotes = chan[0]
 
-    # asyncio.create_task(reader_common(common, 'common.messages'))
-    # asyncio.create_task(reader_private(private, 'private.messages'))
+    # chan = await redis_worker_access.subscribe("common.quotes")
+    # quotes = chan[0]
+
+    asyncio.create_task(reader_common(common, 'common.messages'))
+    asyncio.create_task(reader_private(private, 'private.messages'))
     asyncio.create_task(reader_common(quotes, 'common.quotes'))
+    asyncio.create_task(redis_test(quotes))
+    asyncio.create_task(check_connections())
+
+
+async def redis_test(common):
+    logger.debug('check redis initialized')
+    while True:
+        message = await common.get_json()
+        logger.info(json.dumps(message))
+
+
+async def check_connections():
+    logger.debug('check connections initialized')
+    while True:
+        for socket in sockets:
+            if socket.websocket.closed:
+                sockets.remove(socket)
 
 
 async def reader_common(common, name):
-    logger.debug('   reader common initialized')
+    logger.debug(f'reader common for {name} initialized')
     while True:
         message = await common.get_json()
-        logger.debug(message)
-        logger.debug(len(sockets))
-        for socket in sockets:
-            await socket.websocket.send_json(message)
-            await asyncio.sleep(0.1)
+        # logger.info(str(len(sockets)) + ": " + message)
+        if len(sockets) > 1:
+            logger.info(str(len(sockets)) + ": " + message)
+            for socket in sockets:
+                await socket.websocket.send_json(message)
+                await asyncio.sleep(0.1)
 
 
 async def reader_private(private, name):
-    logger.debug('   reader private initialized')
+    logger.debug(f'reader private for {name} initialized')
     while True:
         message = await private.get_json()
-        # logger.debug(message)
-        # if message['user_id'] in sockets:
-        for socket in sockets:
-            if message['user_id'] == socket.user_id and name in socket.subscriptions:
-                await socket.websocket.send_json(message)
-                await asyncio.sleep(0.1)
+        if len(sockets) > 1:
+            logger.info(str(len(sockets)) + ": " + message)
+            for socket in sockets:
+                if message['user_id'] == socket.user_id and name in socket.subscriptions:
+                    await socket.websocket.send_json(message)
+                    await asyncio.sleep(0.1)
 
 
 #
 @routes.get(r'/{token:\w+}')
 async def on_message(request: Request):
-    websocket = web.WebSocketResponse()
+    websocket = web.WebSocketResponse(heartbeat=10)
     await websocket.prepare(request)
 
-    user_id = 0
-    # token = request.match_info['token']
-    # user_id = int(redis_access.hget('private.tokens', token))
-    # if not token or not user_id:
-    #     logger.debug(f"no token ({token}) or user!")
-    #     return web.Response(text='Hello, friend. Youd better go away')
-    # logger.debug('token:' + token)
-    # logger.debug('user_id:' + str(user_id))
+    logger.debug("New attempt!")
+    token = request.match_info['token']
+    user_id = int(redis_access.hget('private.tokens', token))
+    if not token or not user_id:
+        logger.debug(f"no token ({token}) or user!")
+        return web.Response(text="Hello, friend. You'd better go away.")
 
-    # await expire_queue.put((token, user_id, datetime.now() + timedelta(minutes=5)))
+    logger.debug("New websocket!")
+    logger.debug('token:' + token + 'user_id:' + str(user_id))
+
+    await expire_queue.put((token, user_id, datetime.now() + timedelta(minutes=5)))
+
     socket = Socket(user_id, websocket, set())
 
     sockets.append(socket)
@@ -144,12 +147,11 @@ async def on_message(request: Request):
             logger.debug("adding a subscription")
             data = json.loads(websocket_message.data)
             socket.subscriptions.add(data['subscribe'])
-            logger.debug(socket.subscriptions)
         elif websocket_message.type == WSMsgType.ERROR:
             logger.debug('ws connection closed with exception %s' %
                          websocket.exception())
 
-    # sockets.remove(socket)
+    sockets.remove(socket)
 
     logger.debug('websocket connection closed')
 
@@ -157,7 +159,6 @@ async def on_message(request: Request):
 
 
 async def create_expire_task(app):
-    logger.debug('create expire task initialized')
     asyncio.create_task(expire_task())
 
 
@@ -176,38 +177,15 @@ async def expire_task():
         await asyncio.sleep(0.1)
 
 
-#
-# async def test(app):
-#     return web.Response(text='Test handle')
-
-
 def start():
     app = web.Application()
-    # app.router.add_route('GET', '/', on_message)
-    # app.router.add_route('GET', '/test', test)
     app.router.add_routes(routes)
     app.on_startup.append(redis_worker)
-    app.on_startup.append(create_expire_task)
+    # app.on_startup.append(create_expire_task)
 
-    logger.debug('Starting Socketshark!')
+    logger.warning('Starting Socketshark!')
+    logger.warning(f"started at {time.strftime('%X')}")
     web.run_app(app, host=HOST, port=PORT)
-
-    # from os.path import getmtime
-    #
-    # watched_files = [__file__]
-    # watched_files_mtimes = [(f, getmtime(f)) for f in watched_files]
-    # while True:
-    #     for f, mtime in watched_files_mtimes:
-    #         if getmtime(f) != mtime:
-    #             # os.execv(__file__, sys.argv)
-    #             logger.debug('Shutdown')
-    #             await app.shutdown()
-    #             logger.debug("Start cleaning up")
-    #             await app.cleanup()
-    #             os.execv(sys.executable, ['python'] + sys.argv)
-    #         else:
-    #             logger.debug('Starting Socketshark!')
-    #             web.run_app(app, host=HOST, port=PORT)
 
 
 if __name__ == '__main__':

@@ -1,14 +1,14 @@
 version: v1beta9
 images:
   app:
-    image: eu.gcr.io/my-projectjwmt7xk/cryptoman-socketshark-dev
+    image: eu.gcr.io/my-projectjwmt7xk/cryptoman-socketshark
     dockerfile: Dockerfile
     preferSyncOverRebuild: true
     injectRestartHelper: true
     appendDockerfileInstructions:
     - USER root
 deployments:
-- name: cryptoman-socketshark-dev
+- name: cryptoman-socketshark
   namespace: cryptoman
   helm:
     componentChart: true
@@ -17,7 +17,7 @@ deployments:
         ports:
           - port: 9011
       containers:
-      - image: eu.gcr.io/my-projectjwmt7xk/cryptoman-socketshark-dev
+      - image: eu.gcr.io/my-projectjwmt7xk/cryptoman-socketshark
         env:
           - name: REDIS_HOST
             valueFrom:
