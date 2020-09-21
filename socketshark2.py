@@ -41,8 +41,10 @@ logger = logging.getLogger('')
 
 HOST = '0.0.0.0'
 PORT = int(os.getenv('SOCKETSHARK_PORT', 9011))
-redis_host = os.getenv('REDIS_HOST', 'localhost')
+redis_host = os.getenv('socketshark.pysocketshark.py', 'localhost')
 redis_password = os.getenv('REDIS_PASSWORD', '')
+
+redis_access = Redis(host=redis_host, password=redis_password)
 
 routes = web.RouteTableDef()
 sockets: typing.List['Socket'] = []
@@ -74,11 +76,11 @@ async def redis_worker(app):
     # chan = await redis_worker_access.subscribe("common.quotes")
     # quotes = chan[0]
 
-    asyncio.create_task(reader_common(common, 'common.messages'))
     asyncio.create_task(reader_private(private, 'private.messages'))
+    asyncio.create_task(reader_common(common, 'common.messages'))
     asyncio.create_task(reader_common(quotes, 'common.quotes'))
-    asyncio.create_task(redis_test(quotes))
-    asyncio.create_task(check_connections())
+    # asyncio.create_task(redis_test(quotes))
+    # asyncio.create_task(check_connections())
 
 
 async def redis_test(common):
@@ -97,27 +99,27 @@ async def check_connections():
 
 
 async def reader_common(common, name):
-    logger.debug(f'reader common for {name} initialized')
+    logger.debug(f' reader common for {name} initialized')
     while True:
         message = await common.get_json()
-        # logger.info(str(len(sockets)) + ": " + message)
-        if len(sockets) > 1:
-            logger.info(str(len(sockets)) + ": " + message)
-            for socket in sockets:
-                await socket.websocket.send_json(message)
-                await asyncio.sleep(0.1)
+        # logger.info(json.dumps(message))
+        logger.info(str(len(sockets)) + str(message))
+        # if len(sockets) > 1:
+        for socket in sockets:
+            await socket.websocket.send_json(message)
+            await asyncio.sleep(0.1)
 
 
 async def reader_private(private, name):
     logger.debug(f'reader private for {name} initialized')
     while True:
         message = await private.get_json()
-        if len(sockets) > 1:
-            logger.info(str(len(sockets)) + ": " + message)
-            for socket in sockets:
-                if message['user_id'] == socket.user_id and name in socket.subscriptions:
-                    await socket.websocket.send_json(message)
-                    await asyncio.sleep(0.1)
+        # if len(sockets) > 1:
+        logger.info(str(len(sockets)) + ": " + message)
+        for socket in sockets:
+            if message['user_id'] == socket.user_id and name in socket.subscriptions:
+                await socket.websocket.send_json(message)
+                await asyncio.sleep(0.1)
 
 
 #
@@ -136,7 +138,7 @@ async def on_message(request: Request):
     logger.debug("New websocket!")
     logger.debug('token:' + token + 'user_id:' + str(user_id))
 
-    await expire_queue.put((token, user_id, datetime.now() + timedelta(minutes=5)))
+    await expire_queue.put((token, user_id, datetime.now() + timedelta(minutes=30)))
 
     socket = Socket(user_id, websocket, set())
 
@@ -181,7 +183,7 @@ def start():
     app = web.Application()
     app.router.add_routes(routes)
     app.on_startup.append(redis_worker)
-    # app.on_startup.append(create_expire_task)
+    app.on_startup.append(create_expire_task)
 
     logger.warning('Starting Socketshark!')
     logger.warning(f"started at {time.strftime('%X')}")
